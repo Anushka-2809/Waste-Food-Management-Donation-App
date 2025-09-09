@@ -12,7 +12,7 @@ import { toast } from 'sonner';
 
 export default function FindFood() {
   const [foodItems, setFoodItems] = useState<FoodItem[]>([]);
-  const [selectedLocation, setSelectedLocation] = useState('All of Tamil Nadu');
+  const [selectedLocation, setSelectedLocation] = useState('All of Kolkata');
   const [selectedCategory, setSelectedCategory] = useState('All Categories');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedFood, setSelectedFood] = useState<FoodItem | null>(null);
@@ -51,7 +51,7 @@ export default function FindFood() {
       item.description?.toLowerCase().includes(searchQuery.toLowerCase());
     
     const matchesLocation = 
-      selectedLocation === 'All of Tamil Nadu' || 
+      selectedLocation === 'All of Kolkata' || 
       item.location === selectedLocation;
     
     const matchesCategory = 
@@ -78,7 +78,7 @@ export default function FindFood() {
       <div className="container mx-auto py-8 px-4">
         <BackButton to="/" />
         <div className="text-center mb-10">
-          <h1 className="text-3xl md:text-4xl font-bold text-foodie-dark mb-4">Available Food in Tamil Nadu</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-foodie-dark mb-4">Available Food in Kolkata</h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Browse food donations available in your area and request what you need.
           </p>
@@ -136,7 +136,7 @@ export default function FindFood() {
           <div className="text-center py-12">
             <h3 className="text-lg font-medium mb-2">No food items available</h3>
             <p className="text-gray-500 mb-6">
-              {searchQuery || selectedLocation !== 'All of Tamil Nadu' || selectedCategory !== 'All Categories'
+              {searchQuery || selectedLocation !== 'All of Kolkata' || selectedCategory !== 'All Categories'
                 ? 'Try adjusting your filters or search query.'
                 : 'There are currently no food donations available. Please check back later.'}
             </p>
@@ -145,7 +145,7 @@ export default function FindFood() {
               className="border-foodie-green text-foodie-green hover:bg-foodie-green hover:text-white"
               onClick={() => {
                 setSearchQuery('');
-                setSelectedLocation('All of Tamil Nadu');
+                setSelectedLocation('All of Kolkata');
                 setSelectedCategory('All Categories');
               }}
             >

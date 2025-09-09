@@ -10,27 +10,26 @@ interface LocationDropdownProps {
   selectedLocation: string;
 }
 
-const tamilNaduLocations = [
-  "All of Tamil Nadu",
-  "Chennai",
-  "Coimbatore",
-  "Madurai",
-  "Salem",
-  "Tiruchirappalli",
-  "Tiruppur",
-  "Vellore",
-  "Erode",
-  "Thoothukkudi",
-  "Dindigul",
-  "Thanjavur",
-  "Tirunelveli",
-  "Hosur",
-  "Nagercoil",
-  "Kanchipuram",
-  "Kumarapalayam",
-  "Karaikkudi",
-  "Neyveli",
-  "Cuddalore"
+const kolkataLocations = [
+  "All of Kolkata",
+  "North Kolkata",
+  "South Kolkata",
+  "East Kolkata",
+  "West Kolkata",
+  "Salt Lake",
+  "New Town",
+  "Howrah",
+  "Dum Dum",
+  "Behala",
+  "Garia",
+  "Jadavpur",
+  "Park Street",
+  "Ballygunge",
+  "Tollygunge",
+  "Barasat",
+  "Barrackpore",
+  "Sodepur",
+  "Kolkata Airport Area"
 ];
 
 export default function LocationDropdown({ onLocationSelect, selectedLocation }: LocationDropdownProps) {
@@ -51,7 +50,7 @@ export default function LocationDropdown({ onLocationSelect, selectedLocation }:
       </PopoverTrigger>
       <PopoverContent className="w-full md:w-[250px] p-0">
         <div className="max-h-[300px] overflow-y-auto">
-          {tamilNaduLocations.map((location) => (
+          {kolkataLocations.map((location) => (
             <Button
               key={location}
               variant="ghost"

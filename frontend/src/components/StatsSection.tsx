@@ -19,7 +19,7 @@ const StatsSection = () => {
     { label: "People Fed", value: `${orderCount > 0 ? orderCount * 5 : '15,000'}+`, icon: "🍲" },
     { label: "Food Donations", value: `${orderCount > 0 ? orderCount : '2,500'}+`, icon: "🥘" },
     { label: "Volunteer Hours", value: `${orderCount > 0 ? orderCount * 2 : '5,200'}+`, icon: "⏰" },
-    { label: "Tamil Nadu Regions", value: "32+", icon: "📍" }
+    { label: "Kolkata Regions", value: "32+", icon: "📍" }
   ];
 
   return (
