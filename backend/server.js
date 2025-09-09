@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const path = require('path');
 const foodDonationsRouter = require('./routes/foodDonations');
+const foodItemsRouter = require('./routes/foodItems');
 const requestsRouter = require('./routes/requests');
 const authRouter = require('./routes/authRoutes');
 
@@ -42,6 +43,7 @@ app.use((req, res, next) => {
 
 // Routes
 app.use('/api/food-donations', foodDonationsRouter);
+app.use('/api/food-items', foodItemsRouter);
 app.use('/api/requests', requestsRouter);
 app.use('/api/auth', authRouter);
 
