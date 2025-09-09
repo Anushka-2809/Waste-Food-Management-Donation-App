@@ -28,7 +28,7 @@ export default function Dashboard() {
     const fetchDonationStats = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch('/api/food-donations');
+  const response = await fetch('https://waste-food-management-drix.vercel.app/api/food-donations');
         if (!response.ok) {
           throw new Error('Failed to fetch donations');
         }

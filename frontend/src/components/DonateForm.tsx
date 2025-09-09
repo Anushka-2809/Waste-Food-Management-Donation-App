@@ -166,7 +166,7 @@ export default function DonateForm({ onSuccessfulDonation }: { onSuccessfulDonat
       console.log('Submitting donation data:', donationData);
 
       // Send to backend API
-      const response = await fetch('/api/food-donations', {
+  const response = await fetch('https://waste-food-management-drix.vercel.app/api/food-donations', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
