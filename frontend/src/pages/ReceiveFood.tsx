@@ -19,7 +19,7 @@ export default function ReceiveFood() {
         <div className="text-center mb-10">
           <h1 className="text-3xl md:text-4xl font-bold text-foodie-dark mb-4">Request Food Assistance</h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We connect people in need with available food donations across Tamil Nadu. Fill out your details and we'll help you get the support you need.
+            We connect people in need with available food donations across Kolkata. Fill out your details and we'll help you get the support you need.
           </p>
         </div>
         

@@ -201,7 +201,7 @@ export default function DonateForm({ onSuccessfulDonation }: { onSuccessfulDonat
       <CardHeader className="bg-foodie-orange bg-opacity-10 rounded-t-lg">
         <CardTitle className="text-foodie-dark text-2xl">Donate Food</CardTitle>
         <CardDescription>
-          Share your food with those in need within Tamil Nadu
+          Share your food with those in need within Kolkata
         </CardDescription>
       </CardHeader>
       <CardContent className="pt-6">
@@ -372,7 +372,7 @@ export default function DonateForm({ onSuccessfulDonation }: { onSuccessfulDonat
             <div className="grid md:grid-cols-2 gap-6">
               <div className="grid gap-3">
                 <label htmlFor="location" className="text-sm font-medium">
-                  Location in Tamil Nadu *
+                  Location in Kolkata *
                 </label>
                 <LocationDropdown
                   onLocationSelect={handleLocationSelect}

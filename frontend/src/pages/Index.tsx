@@ -35,7 +35,7 @@ const Index = () => {
               <span className="text-foodie-orange">Spread</span> Happiness
             </h1>
             <p className="text-lg md:text-xl text-gray-700 mb-8">
-              Join our community in Tamil Nadu to donate excess food and help those in need. Together, we can reduce food waste and fight hunger.
+              Join our community in Kolkata to donate excess food and help those in need. Together, we can reduce food waste and fight hunger.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild className="bg-foodie-green hover:bg-foodie-green/90 text-white px-8 py-6 rounded-lg text-lg">
@@ -49,7 +49,7 @@ const Index = () => {
           <div className="md:w-1/2 md:pl-10">
             <img
               src="https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=1000"
-              alt="Food Sharing in Tamil Nadu"
+              alt="Food Sharing in Kolkata"
               className="rounded-lg shadow-xl w-full h-auto object-cover"
             />
           </div>
@@ -149,7 +149,7 @@ const Index = () => {
             <div>
               <h3 className="text-xl font-bold mb-4">FoodieGrandpa</h3>
               <p className="text-gray-300">
-                Connecting food donors with those in need across Tamil Nadu.
+                Connecting food donors with those in need across Kolkata.
               </p>
             </div>
             <div>
