@@ -33,7 +33,7 @@ export default function DonateForm({ onSuccessfulDonation }: { onSuccessfulDonat
     description: '',
     quantity: '',
     expiryDate: '',
-    location: 'Chennai',
+    location: 'Kolkata',
     address: '',
     image: DEFAULT_IMAGE
   });
