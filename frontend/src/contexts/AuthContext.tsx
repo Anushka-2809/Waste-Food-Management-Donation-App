@@ -17,7 +17,7 @@ interface AuthContextType {
   error: string | null;
 }
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://waste-food-management-drix.vercel.app/api';
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
