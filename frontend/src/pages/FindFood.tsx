@@ -25,7 +25,7 @@ export default function FindFood() {
   const fetchFoodItems = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch('/api/food-donations?status=available');
+  const response = await fetch('https://waste-food-management-drix.vercel.app/api/food-donations?status=available');
       if (!response.ok) {
         throw new Error('Failed to fetch food items');
       }

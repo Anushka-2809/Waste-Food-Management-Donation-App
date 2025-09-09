@@ -50,7 +50,7 @@ export default function ContactForm({ foodItemId, onSuccess }: ContactFormProps)
     try {
       if (foodItemId) {
         // First create the request record
-        const requestResponse = await fetch('/api/requests', {
+  const requestResponse = await fetch('https://waste-food-management-drix.vercel.app/api/requests', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ export default function ContactForm({ foodItemId, onSuccess }: ContactFormProps)
         }
 
         // Then update the food item status to reserved
-        const statusResponse = await fetch(`/api/food-donations/${foodItemId}`, {
+  const statusResponse = await fetch(`https://waste-food-management-drix.vercel.app/api/food-donations/${foodItemId}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
