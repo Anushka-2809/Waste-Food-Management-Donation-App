@@ -78,8 +78,8 @@ export default function FindFood() {
       <div className="container mx-auto py-8 px-4">
         <BackButton to="/" />
         <div className="text-center mb-10">
-          <h1 className="text-3xl md:text-4xl font-bold text-foodie-dark mb-4">Available Food in Kolkata</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Available Food in Kolkata</h1>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Browse food donations available in your area and request what you need.
           </p>
         </div>
@@ -135,7 +135,7 @@ export default function FindFood() {
         ) : (
           <div className="text-center py-12">
             <h3 className="text-lg font-medium mb-2">No food items available</h3>
-            <p className="text-gray-500 mb-6">
+            <p className="text-muted-foreground mb-6">
               {searchQuery || selectedLocation !== 'All of Kolkata' || selectedCategory !== 'All Categories'
                 ? 'Try adjusting your filters or search query.'
                 : 'There are currently no food donations available. Please check back later.'}

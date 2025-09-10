@@ -55,7 +55,7 @@ export default function Contact() {
         <div className="space-y-6">
           <div>
             <h2 className="text-2xl font-bold mb-4">Get in Touch</h2>
-            <p className="text-gray-600 dark:text-gray-400 mb-6">
+            <p className="text-muted-foreground mb-6">
               Have questions about WasteWise? We'd love to hear from you.
               Send us a message and we'll respond as soon as possible.
             </p>

@@ -32,7 +32,7 @@ export default function About() {
       {/* Hero Section */}
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold mb-4">About WasteWise</h1>
-        <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
           We're on a mission to revolutionize food sharing and build stronger communities
           through the power of homemade meals.
         </p>
@@ -45,7 +45,7 @@ export default function About() {
             <CardContent className="p-0 space-y-4">
               <div className="flex justify-center">{feature.icon}</div>
               <h3 className="text-xl font-semibold text-center">{feature.title}</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-center">
+              <p className="text-muted-foreground text-center">
                 {feature.description}
               </p>
             </CardContent>
@@ -56,7 +56,7 @@ export default function About() {
       {/* Story Section */}
       <div className="mb-16">
         <h2 className="text-3xl font-bold mb-6 text-center">Our Story</h2>
-        <div className="max-w-3xl mx-auto text-gray-600 dark:text-gray-400 space-y-4">
+        <div className="max-w-3xl mx-auto text-muted-foreground space-y-4">
           <p>
             WasteWise started with a simple idea: what if we could connect people who love to cook
             with those who crave a homemade meal? Our founder noticed how many talented

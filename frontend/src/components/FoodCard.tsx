@@ -59,7 +59,7 @@ export default function FoodCard({ food, onClick, actionText = "Request" }: Food
         </div>
       </CardHeader>
       <CardContent className="p-4 pt-0">
-        <CardDescription className="line-clamp-2 text-sm text-gray-500">
+        <CardDescription className="line-clamp-2 text-sm text-muted-foreground">
           {food.description}
         </CardDescription>
         <div className="mt-3 grid grid-cols-2 gap-2 text-xs">

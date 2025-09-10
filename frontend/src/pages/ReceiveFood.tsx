@@ -17,8 +17,8 @@ export default function ReceiveFood() {
       <div className="container mx-auto py-8 px-4">
         <BackButton to="/" />
         <div className="text-center mb-10">
-          <h1 className="text-3xl md:text-4xl font-bold text-foodie-dark mb-4">Request Food Assistance</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Request Food Assistance</h1>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             We connect people in need with available food donations across Kolkata. Fill out your details and we'll help you get the support you need.
           </p>
         </div>
@@ -29,7 +29,7 @@ export default function ReceiveFood() {
 
         <div className="mt-16 text-center">
           <h2 className="text-xl font-semibold mb-4">Browse Available Food</h2>
-          <p className="text-gray-600 mb-6">
+          <p className="text-muted-foreground mb-6">
             See what food is currently available in your area
           </p>
           <Button

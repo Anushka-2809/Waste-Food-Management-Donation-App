@@ -199,7 +199,7 @@ export default function DonateForm({ onSuccessfulDonation }: { onSuccessfulDonat
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader className="bg-foodie-orange bg-opacity-10 rounded-t-lg">
-        <CardTitle className="text-foodie-dark text-2xl">Donate Food</CardTitle>
+        <CardTitle className="text-foreground text-2xl">Donate Food</CardTitle>
         <CardDescription>
           Share your food with those in need within Kolkata
         </CardDescription>
@@ -313,7 +313,7 @@ export default function DonateForm({ onSuccessfulDonation }: { onSuccessfulDonat
                 Food Image *
               </label>
               <div className="flex items-center gap-4">
-                <div className="border border-dashed border-gray-300 rounded-lg p-4 flex flex-col items-center justify-center w-full h-32 bg-gray-50 cursor-pointer relative overflow-hidden">
+                <div className="border border-dashed border-border rounded-lg p-4 flex flex-col items-center justify-center w-full h-32 bg-muted cursor-pointer relative overflow-hidden">
                   <input
                     type="file"
                     id="foodImage"
@@ -330,8 +330,8 @@ export default function DonateForm({ onSuccessfulDonation }: { onSuccessfulDonat
                     />
                   ) : (
                     <div className="flex flex-col items-center justify-center">
-                      <ImagePlus className="h-8 w-8 text-gray-400" />
-                      <p className="text-sm text-gray-500 mt-2">Upload food image (max 1MB)</p>
+                      <ImagePlus className="h-8 w-8 text-muted-foreground" />
+                      <p className="text-sm text-muted-foreground mt-2">Upload food image (max 1MB)</p>
                     </div>
                   )}
                 </div>

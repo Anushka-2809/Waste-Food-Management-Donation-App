@@ -23,16 +23,16 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Impact</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">Our Impact</h2>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center p-6 bg-foodie-light rounded-lg shadow-sm">
+            <div key={index} className="text-center p-6 bg-card rounded-lg shadow-sm border">
               <div className="text-4xl mb-3">{stat.icon}</div>
               <div className="text-3xl font-bold text-foodie-green mb-1">{stat.value}</div>
-              <div className="text-gray-600">{stat.label}</div>
+              <div className="text-muted-foreground">{stat.label}</div>
             </div>
           ))}
         </div>

@@ -1,9 +1,7 @@
-
-import React, { useState } from 'react';
-import { Button } from "@/components/ui/button";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Check, ChevronDown } from "lucide-react";
+import React from 'react';
+import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 
 interface LocationDropdownProps {
   onLocationSelect: (location: string) => void;
@@ -33,47 +31,24 @@ const kolkataLocations = [
 ];
 
 export default function LocationDropdown({ onLocationSelect, selectedLocation }: LocationDropdownProps) {
-  const [open, setOpen] = useState(false);
-
   return (
-    <Popover open={open} onOpenChange={setOpen}>
-      <PopoverTrigger asChild>
-        <Button
-          variant="outline"
-          role="combobox"
-          aria-expanded={open}
-          className="w-full md:w-[250px] justify-between bg-white"
-        >
-          <span className="truncate">{selectedLocation}</span>
-          <ChevronDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
-        </Button>
-      </PopoverTrigger>
-      <PopoverContent className="w-full md:w-[250px] p-0">
-        <div className="max-h-[300px] overflow-y-auto">
-          {kolkataLocations.map((location) => (
-            <Button
-              key={location}
-              variant="ghost"
-              className={cn(
-                "flex w-full items-center justify-start px-4 py-2 hover:bg-gray-100",
-                selectedLocation === location && "bg-gray-100"
-              )}
-              onClick={() => {
-                onLocationSelect(location);
-                setOpen(false);
-              }}
-            >
-              <Check
-                className={cn(
-                  "mr-2 h-4 w-4",
-                  selectedLocation === location ? "opacity-100" : "opacity-0"
-                )}
-              />
+    <Select
+      onValueChange={onLocationSelect}
+      value={selectedLocation}
+    >
+      <SelectTrigger>
+        <SelectValue placeholder="Select Area" />
+      </SelectTrigger>
+      <SelectContent>
+        {kolkataLocations.map(location => (
+          <SelectItem key={location} value={location}>
+            <span className="flex items-center">
+              <Check className={cn("mr-2 h-4 w-4", selectedLocation === location ? "opacity-100" : "opacity-0")}/>
               {location}
-            </Button>
-          ))}
-        </div>
-      </PopoverContent>
-    </Popover>
+            </span>
+          </SelectItem>
+        ))}
+      </SelectContent>
+    </Select>
   );
 }
