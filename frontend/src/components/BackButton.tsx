@@ -11,7 +11,7 @@ interface BackButtonProps {
 
 const BackButton = ({ to, className = "" }: BackButtonProps) => {
   const navigate = useNavigate();
-  
+
   const handleBack = () => {
     if (to) {
       navigate(to);
@@ -19,10 +19,10 @@ const BackButton = ({ to, className = "" }: BackButtonProps) => {
       navigate(-1);
     }
   };
-  
+
   return (
-    <Button 
-      variant="ghost" 
+    <Button
+      variant="ghost"
       onClick={handleBack}
       className={`flex items-center gap-1 mb-4 ${className}`}
     >

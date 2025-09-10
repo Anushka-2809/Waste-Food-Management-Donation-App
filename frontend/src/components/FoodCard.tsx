@@ -75,7 +75,7 @@ export default function FoodCard({ food, onClick, actionText = "Request" }: Food
         </div>
       </CardContent>
       <CardFooter className="p-4 pt-0">
-        <Button 
+        <Button
           className="w-full bg-foodie-green hover:bg-foodie-green/90"
           onClick={onClick}
           disabled={food.status !== 'available'}

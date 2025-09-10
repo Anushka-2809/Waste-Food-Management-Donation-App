@@ -10,7 +10,7 @@ import HeaderNav from '@/components/HeaderNav';
 export default function ReceiveFood() {
   const navigate = useNavigate();
   const [showForm, setShowForm] = useState(false);
-  
+
   return (
     <>
       <HeaderNav />
@@ -22,24 +22,24 @@ export default function ReceiveFood() {
             We connect people in need with available food donations across Kolkata. Fill out your details and we'll help you get the support you need.
           </p>
         </div>
-        
+
         <div className="max-w-3xl mx-auto">
           <ContactForm />
         </div>
-        
+
         <div className="mt-16 text-center">
           <h2 className="text-xl font-semibold mb-4">Browse Available Food</h2>
           <p className="text-gray-600 mb-6">
             See what food is currently available in your area
           </p>
-          <Button 
+          <Button
             className="bg-foodie-orange hover:bg-foodie-orange/90"
             onClick={() => navigate("/find-food")}
           >
             View Food Listings
           </Button>
         </div>
-        
+
         <Dialog open={showForm} onOpenChange={setShowForm}>
           <DialogContent className="sm:max-w-lg">
             <DialogHeader>

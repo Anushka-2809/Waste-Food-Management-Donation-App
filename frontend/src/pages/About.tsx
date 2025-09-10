@@ -31,7 +31,7 @@ export default function About() {
       <BackButton to="/" />
       {/* Hero Section */}
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold mb-4">About Foodie Grandpa</h1>
+        <h1 className="text-4xl font-bold mb-4">About WasteWise</h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
           We're on a mission to revolutionize food sharing and build stronger communities
           through the power of homemade meals.
@@ -58,14 +58,14 @@ export default function About() {
         <h2 className="text-3xl font-bold mb-6 text-center">Our Story</h2>
         <div className="max-w-3xl mx-auto text-gray-600 dark:text-gray-400 space-y-4">
           <p>
-            Foodie Grandpa started with a simple idea: what if we could connect people who love to cook
+            WasteWise started with a simple idea: what if we could connect people who love to cook
             with those who crave a homemade meal? Our founder noticed how many talented
             home cooks in the neighborhood had extra portions of delicious meals that often went to waste.
           </p>
           <p>
             At the same time, there were plenty of people - students, busy professionals, and elderly
             neighbors - who would love nothing more than a warm, home-cooked meal. That's when
-            Foodie Grandpa was born.
+            WasteWise was born.
           </p>
           <p>
             Since our launch in 2023, we've helped facilitate thousands of meal shares, creating

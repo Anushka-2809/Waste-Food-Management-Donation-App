@@ -28,18 +28,18 @@ export default function Dashboard() {
     const fetchDonationStats = async () => {
       try {
         setIsLoading(true);
-  const response = await fetch('https://waste-food-management-drix.vercel.app/api/food-donations');
+        const response = await fetch('https://waste-food-management-drix.vercel.app/api/food-donations');
         if (!response.ok) {
           throw new Error('Failed to fetch donations');
         }
         const donations = await response.json();
-        
+
         // Calculate statistics
         const totalDonations = donations.length;
         const activeDonations = donations.filter(d => d.status === 'available').length;
         const reservedDonations = donations.filter(d => d.status === 'reserved').length;
         const completedDonations = donations.filter(d => d.status === 'completed').length;
-        
+
         setStats({
           totalDonations,
           activeDonations,
@@ -94,7 +94,7 @@ export default function Dashboard() {
           </Button>
         </div>
       </div>
-      
+
       <Tabs defaultValue="overview" className="space-y-6">
         <TabsList>
           <TabsTrigger value="overview">Overview</TabsTrigger>

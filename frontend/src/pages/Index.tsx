@@ -25,7 +25,7 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <HeaderNav />
-      
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-foodie-green/10 to-foodie-orange/10 py-16 md:py-24">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
@@ -48,17 +48,17 @@ const Index = () => {
           </div>
           <div className="md:w-1/2 md:pl-10">
             <img
-              src="https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=1000"
+              src="https://i.pinimg.com/1200x/6c/c2/3a/6cc23a1f120a0dfdabb8c420c052b5fd.jpg"
               alt="Food Sharing in Kolkata"
               className="rounded-lg shadow-xl w-full h-auto object-cover"
             />
           </div>
         </div>
       </section>
-      
+
       {/* Stats Section */}
       <StatsSection />
-      
+
       {/* How It Works Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -94,7 +94,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Testimonials */}
       <section className="py-16 bg-foodie-light">
         <div className="container mx-auto px-4">
@@ -110,7 +110,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-      
+
       {/* CTA Section */}
       <section className="py-16 bg-foodie-green text-white">
         <div className="container mx-auto px-4 text-center">
@@ -141,7 +141,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Footer */}
       <footer className="bg-foodie-dark text-white py-10">
         <div className="container mx-auto px-4">
@@ -177,6 +177,5 @@ const Index = () => {
     </div>
   );
 };
-{/* developed by bharanidharan g */}
 
 export default Index;

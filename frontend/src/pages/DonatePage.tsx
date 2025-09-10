@@ -8,7 +8,7 @@ import BackButton from "@/components/BackButton";
 
 export default function DonatePage() {
   const navigate = useNavigate();
-  
+
   const handleSuccessfulDonation = (donation: FoodItem) => {
     // Navigate to find food page after a short delay
     setTimeout(() => {
@@ -16,7 +16,7 @@ export default function DonatePage() {
       navigate("/find-food");
     }, 2000);
   };
-  
+
   return (
     <div className="container mx-auto py-8 px-4">
       <BackButton to="/" />
@@ -26,18 +26,18 @@ export default function DonatePage() {
           Your generosity can make a difference. Donate excess food to help those in need in Kolkata.
         </p>
       </div>
-      
+
       <div className="max-w-3xl mx-auto">
         <DonateForm onSuccessfulDonation={handleSuccessfulDonation} />
       </div>
-      
+
       <div className="mt-16 text-center">
         <h2 className="text-xl font-semibold mb-4">Thank You For Your Kindness</h2>
         <p className="text-gray-600 mb-6">
           Together, we can reduce food waste and fight hunger in our community.
         </p>
-        <Button 
-          variant="outline" 
+        <Button
+          variant="outline"
           className="border-foodie-green text-foodie-green hover:bg-foodie-green hover:text-white"
           onClick={() => navigate("/find-food")}
         >

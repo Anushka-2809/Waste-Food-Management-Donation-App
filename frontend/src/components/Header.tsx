@@ -41,8 +41,8 @@ export function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <span className="text-2xl font-bold">
-              <span className="text-foodie-orange">Foodie</span>{' '}
-              <span className="text-foodie-green">Grandpa</span>
+              <span className="text-foodie-orange">Waste</span>{' '}
+              <span className="text-foodie-green">Wise</span>
             </span>
           </Link>
 

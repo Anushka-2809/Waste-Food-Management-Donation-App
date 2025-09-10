@@ -33,7 +33,7 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     setError(null);
-    
+
     try {
       // Here you would typically send the form data to your backend
       // For now, we'll just simulate a successful submission
@@ -56,7 +56,7 @@ export default function Contact() {
           <div>
             <h2 className="text-2xl font-bold mb-4">Get in Touch</h2>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              Have questions about Foodie Grandpa? We'd love to hear from you.
+              Have questions about WasteWise? We'd love to hear from you.
               Send us a message and we'll respond as soon as possible.
             </p>
           </div>
@@ -101,7 +101,7 @@ export default function Contact() {
                   <AlertDescription>{error}</AlertDescription>
                 </Alert>
               )}
-              
+
               {success && (
                 <Alert className="bg-green-50 text-green-700 border-green-200">
                   <AlertDescription>
@@ -177,5 +177,5 @@ export default function Contact() {
       </div>
     </div>
   );
-} 
-{/* developed by bharanidharan g */}
+}
+{/* developed by bharanidharan g */ }

@@ -18,14 +18,14 @@ export default function FindFood() {
   const [selectedFood, setSelectedFood] = useState<FoodItem | null>(null);
   const [showContactForm, setShowContactForm] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  
+
   const categories = ['All Categories', 'Cooked Meals', 'Fresh Produce', 'Packaged Food', 'Dairy & Eggs', 'Bakery Items', 'Beverages', 'Grains & Rice', 'Snacks'];
-  
+
   // Load data from API
   const fetchFoodItems = async () => {
     try {
       setIsLoading(true);
-  const response = await fetch('https://waste-food-management-drix.vercel.app/api/food-donations?status=available');
+      const response = await fetch('https://waste-food-management-drix.vercel.app/api/food-donations?status=available');
       if (!response.ok) {
         throw new Error('Failed to fetch food items');
       }
@@ -46,21 +46,21 @@ export default function FindFood() {
 
   // Filter food items based on search, location and category
   const filteredFoodItems = foodItems.filter(item => {
-    const matchesSearch = 
-      item.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+    const matchesSearch =
+      item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.description?.toLowerCase().includes(searchQuery.toLowerCase());
-    
-    const matchesLocation = 
-      selectedLocation === 'All of Kolkata' || 
+
+    const matchesLocation =
+      selectedLocation === 'All of Kolkata' ||
       item.location === selectedLocation;
-    
-    const matchesCategory = 
-      selectedCategory === 'All Categories' || 
+
+    const matchesCategory =
+      selectedCategory === 'All Categories' ||
       item.category === selectedCategory;
-    
+
     return matchesSearch && matchesLocation && matchesCategory;
   });
-  
+
   const handleRequestFood = (food: FoodItem) => {
     setSelectedFood(food);
     setShowContactForm(true);
@@ -71,7 +71,7 @@ export default function FindFood() {
     fetchFoodItems(); // Refresh the food items list
     setSelectedFood(null);
   };
-  
+
   return (
     <>
       <HeaderNav />
@@ -83,7 +83,7 @@ export default function FindFood() {
             Browse food donations available in your area and request what you need.
           </p>
         </div>
-        
+
         <div className="max-w-6xl mx-auto mb-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
@@ -94,14 +94,14 @@ export default function FindFood() {
                 className="w-full"
               />
             </div>
-            
+
             <div>
               <LocationDropdown
                 selectedLocation={selectedLocation}
                 onLocationSelect={setSelectedLocation}
               />
             </div>
-            
+
             <div>
               <Select onValueChange={setSelectedCategory} value={selectedCategory}>
                 <SelectTrigger className="w-full">
@@ -116,7 +116,7 @@ export default function FindFood() {
             </div>
           </div>
         </div>
-        
+
         {isLoading ? (
           <div className="text-center py-12">
             <p className="text-lg">Loading available food items...</p>
@@ -140,8 +140,8 @@ export default function FindFood() {
                 ? 'Try adjusting your filters or search query.'
                 : 'There are currently no food donations available. Please check back later.'}
             </p>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               className="border-foodie-green text-foodie-green hover:bg-foodie-green hover:text-white"
               onClick={() => {
                 setSearchQuery('');
@@ -153,7 +153,7 @@ export default function FindFood() {
             </Button>
           </div>
         )}
-        
+
         <Dialog open={showContactForm} onOpenChange={setShowContactForm}>
           <DialogContent className="sm:max-w-lg">
             <DialogHeader>
@@ -162,8 +162,8 @@ export default function FindFood() {
                 Please provide your contact information to request this food item.
               </DialogDescription>
             </DialogHeader>
-            <ContactForm 
-              foodItemId={selectedFood?._id} 
+            <ContactForm
+              foodItemId={selectedFood?._id}
               onSuccess={handleRequestSuccess}
             />
           </DialogContent>
