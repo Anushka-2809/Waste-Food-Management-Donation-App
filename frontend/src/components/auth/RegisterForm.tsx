@@ -162,9 +162,9 @@ export function RegisterForm() {
             />
           </div>
 
-          <Button 
-            type="submit" 
-            className="w-full" 
+          <Button
+            type="submit"
+            className="w-full"
             disabled={isLoading}
             variant="default"
           >
@@ -173,7 +173,7 @@ export function RegisterForm() {
         </form>
       </CardContent>
       <CardFooter className="flex justify-center">
-        <p className="text-sm text-gray-600">
+        <p className="text-sm text-muted-foreground">
           Already have an account?{' '}
           <Link to="/login" className="text-primary hover:underline">
             Sign in

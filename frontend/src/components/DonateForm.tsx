@@ -37,23 +37,23 @@ export default function DonateForm({ onSuccessfulDonation }: { onSuccessfulDonat
     address: '',
     image: DEFAULT_IMAGE
   });
-  
+
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
-  
+
   const handleSelectChange = (name: string, value: string) => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
-  
+
   const handleLocationSelect = (location: string) => {
     setFormData(prev => ({ ...prev, location }));
   };
-  
+
   const handleImageChange = async (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
@@ -115,7 +115,7 @@ export default function DonateForm({ onSuccessfulDonation }: { onSuccessfulDonat
       }
     }
   };
-  
+
   const resetForm = () => {
     setFormData({
       ...formData,
@@ -130,7 +130,7 @@ export default function DonateForm({ onSuccessfulDonation }: { onSuccessfulDonat
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (isSubmitting) {
       return;
     }
@@ -166,7 +166,7 @@ export default function DonateForm({ onSuccessfulDonation }: { onSuccessfulDonat
       console.log('Submitting donation data:', donationData);
 
       // Send to backend API
-  const response = await fetch('https://waste-food-management-drix.vercel.app/api/food-donations', {
+      const response = await fetch('https://waste-food-management-drix.vercel.app/api/food-donations', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -195,11 +195,11 @@ export default function DonateForm({ onSuccessfulDonation }: { onSuccessfulDonat
       setIsSubmitting(false);
     }
   };
-  
+
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader className="bg-foodie-orange bg-opacity-10 rounded-t-lg">
-        <CardTitle className="text-foodie-dark text-2xl">Donate Food</CardTitle>
+        <CardTitle className="text-foreground text-2xl">Donate Food</CardTitle>
         <CardDescription>
           Share your food with those in need within Kolkata
         </CardDescription>
@@ -222,7 +222,7 @@ export default function DonateForm({ onSuccessfulDonation }: { onSuccessfulDonat
                   disabled={isSubmitting}
                 />
               </div>
-              
+
               <div className="grid gap-3">
                 <label htmlFor="phone" className="text-sm font-medium">
                   Phone Number *
@@ -239,7 +239,7 @@ export default function DonateForm({ onSuccessfulDonation }: { onSuccessfulDonat
                 />
               </div>
             </div>
-            
+
             <div className="grid gap-3">
               <label htmlFor="donorName" className="text-sm font-medium">
                 Organization/Business Name (if applicable)
@@ -253,7 +253,7 @@ export default function DonateForm({ onSuccessfulDonation }: { onSuccessfulDonat
                 disabled={isSubmitting}
               />
             </div>
-            
+
             <div className="grid md:grid-cols-2 gap-6">
               <div className="grid gap-3">
                 <label htmlFor="foodName" className="text-sm font-medium">
@@ -269,13 +269,13 @@ export default function DonateForm({ onSuccessfulDonation }: { onSuccessfulDonat
                   disabled={isSubmitting}
                 />
               </div>
-              
+
               <div className="grid gap-3">
                 <label htmlFor="category" className="text-sm font-medium">
                   Food Category *
                 </label>
-                <Select 
-                  onValueChange={(value) => handleSelectChange('category', value)} 
+                <Select
+                  onValueChange={(value) => handleSelectChange('category', value)}
                   value={formData.category}
                   disabled={isSubmitting}
                 >
@@ -292,7 +292,7 @@ export default function DonateForm({ onSuccessfulDonation }: { onSuccessfulDonat
                 </Select>
               </div>
             </div>
-            
+
             <div className="grid gap-3">
               <label htmlFor="description" className="text-sm font-medium">
                 Description
@@ -313,7 +313,7 @@ export default function DonateForm({ onSuccessfulDonation }: { onSuccessfulDonat
                 Food Image *
               </label>
               <div className="flex items-center gap-4">
-                <div className="border border-dashed border-gray-300 rounded-lg p-4 flex flex-col items-center justify-center w-full h-32 bg-gray-50 cursor-pointer relative overflow-hidden">
+                <div className="border border-dashed border-border rounded-lg p-4 flex flex-col items-center justify-center w-full h-32 bg-muted cursor-pointer relative overflow-hidden">
                   <input
                     type="file"
                     id="foodImage"
@@ -330,14 +330,14 @@ export default function DonateForm({ onSuccessfulDonation }: { onSuccessfulDonat
                     />
                   ) : (
                     <div className="flex flex-col items-center justify-center">
-                      <ImagePlus className="h-8 w-8 text-gray-400" />
-                      <p className="text-sm text-gray-500 mt-2">Upload food image (max 1MB)</p>
+                      <ImagePlus className="h-8 w-8 text-muted-foreground" />
+                      <p className="text-sm text-muted-foreground mt-2">Upload food image (max 1MB)</p>
                     </div>
                   )}
                 </div>
               </div>
             </div>
-            
+
             <div className="grid md:grid-cols-2 gap-6">
               <div className="grid gap-3">
                 <label htmlFor="quantity" className="text-sm font-medium">
@@ -353,7 +353,7 @@ export default function DonateForm({ onSuccessfulDonation }: { onSuccessfulDonat
                   disabled={isSubmitting}
                 />
               </div>
-              
+
               <div className="grid gap-3">
                 <label htmlFor="expiryDate" className="text-sm font-medium">
                   Best Before Date
@@ -368,7 +368,7 @@ export default function DonateForm({ onSuccessfulDonation }: { onSuccessfulDonat
                 />
               </div>
             </div>
-            
+
             <div className="grid md:grid-cols-2 gap-6">
               <div className="grid gap-3">
                 <label htmlFor="location" className="text-sm font-medium">
@@ -380,7 +380,7 @@ export default function DonateForm({ onSuccessfulDonation }: { onSuccessfulDonat
                   disabled={isSubmitting}
                 />
               </div>
-              
+
               <div className="grid gap-3">
                 <label htmlFor="address" className="text-sm font-medium">
                   Pickup Address *
@@ -397,16 +397,16 @@ export default function DonateForm({ onSuccessfulDonation }: { onSuccessfulDonat
               </div>
             </div>
           </div>
-          
+
           <div className="mt-6">
             <p className="text-sm text-muted-foreground mb-2">* Required fields</p>
           </div>
         </form>
       </CardContent>
       <CardFooter className="border-t pt-6 flex justify-end">
-        <Button 
-          type="submit" 
-          className="bg-foodie-orange hover:bg-foodie-orange/90" 
+        <Button
+          type="submit"
+          className="bg-foodie-orange hover:bg-foodie-orange/90"
           onClick={handleSubmit}
           disabled={isSubmitting}
         >

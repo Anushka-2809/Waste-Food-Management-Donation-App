@@ -131,7 +131,7 @@ export function LoginForm() {
                 'Login'
               )}
             </Button>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-muted-foreground">
               Don't have an account?{' '}
               <Link to="/register" className="text-primary hover:underline">
                 Sign up

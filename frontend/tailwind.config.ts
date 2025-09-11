@@ -2,7 +2,7 @@
 import type { Config } from "tailwindcss";
 
 export default {
-	darkMode: ["class"],
+	darkMode: "class",
 	content: [
 		"./pages/**/*.{ts,tsx}",
 		"./components/**/*.{ts,tsx}",
@@ -64,10 +64,10 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				foodie: {
-					orange: '#FF7F50',
-					green: '#4CAF50',
-					light: '#FDF5E6',
-					dark: '#5D4037'
+					orange: '#FF8A65',
+					green: '#66BB6A',
+					light: '#1A1A1A',
+					dark: '#0F0F0F'
 				}
 			},
 			borderRadius: {

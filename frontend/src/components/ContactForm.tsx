@@ -34,7 +34,7 @@ interface ContactFormProps {
 
 export default function ContactForm({ foodItemId, onSuccess }: ContactFormProps) {
   const { toast } = useToast();
-  
+
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -50,7 +50,7 @@ export default function ContactForm({ foodItemId, onSuccess }: ContactFormProps)
     try {
       if (foodItemId) {
         // First create the request record
-  const requestResponse = await fetch('https://waste-food-management-drix.vercel.app/api/requests', {
+        const requestResponse = await fetch('https://waste-food-management-drix.vercel.app/api/requests', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ export default function ContactForm({ foodItemId, onSuccess }: ContactFormProps)
         }
 
         // Then update the food item status to reserved
-  const statusResponse = await fetch(`https://waste-food-management-drix.vercel.app/api/food-donations/${foodItemId}`, {
+        const statusResponse = await fetch(`https://waste-food-management-drix.vercel.app/api/food-donations/${foodItemId}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
@@ -95,7 +95,7 @@ export default function ContactForm({ foodItemId, onSuccess }: ContactFormProps)
           description: "We've received your request and will contact you soon.",
         });
       }
-      
+
       form.reset();
       if (onSuccess) {
         onSuccess();
@@ -126,7 +126,7 @@ export default function ContactForm({ foodItemId, onSuccess }: ContactFormProps)
             </FormItem>
           )}
         />
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
@@ -144,7 +144,7 @@ export default function ContactForm({ foodItemId, onSuccess }: ContactFormProps)
               </FormItem>
             )}
           />
-          
+
           <FormField
             control={form.control}
             name="phone"
@@ -162,7 +162,7 @@ export default function ContactForm({ foodItemId, onSuccess }: ContactFormProps)
             )}
           />
         </div>
-        
+
         <FormField
           control={form.control}
           name="address"
@@ -170,17 +170,17 @@ export default function ContactForm({ foodItemId, onSuccess }: ContactFormProps)
             <FormItem>
               <FormLabel>Delivery Address</FormLabel>
               <FormControl>
-                <Textarea 
-                  placeholder="Enter your complete address for food delivery" 
-                  className="resize-none" 
-                  {...field} 
+                <Textarea
+                  placeholder="Enter your complete address for food delivery"
+                  className="resize-none"
+                  {...field}
                 />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        
+
         <FormField
           control={form.control}
           name="message"
@@ -188,17 +188,17 @@ export default function ContactForm({ foodItemId, onSuccess }: ContactFormProps)
             <FormItem>
               <FormLabel>Additional Notes (Optional)</FormLabel>
               <FormControl>
-                <Textarea 
-                  placeholder="Any specific requirements or preferences?" 
-                  className="resize-none" 
-                  {...field} 
+                <Textarea
+                  placeholder="Any specific requirements or preferences?"
+                  className="resize-none"
+                  {...field}
                 />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        
+
         <Button type="submit" className="w-full bg-foodie-green hover:bg-foodie-green/90">
           Submit Request
         </Button>
